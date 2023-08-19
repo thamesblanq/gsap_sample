@@ -7,7 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        kanit: ['Kanit']
+        kanit: ['Kanit'],
+        rem: ['REM'],
+        poppins: ['Poppins'],
+        bricolage: ['Bricolage Grotesque'],
+        caprasimo: ['Caprasimo']
+      },
+      backgroundImage: {
+        'imgOne': 'url("/src/images/img1.jpg")', 
+        'imgTwo': 'url("/src/images/img2.jpg")', 
+        'imgThree': 'url("/src/images/img3.jpg")' 
       }
     },
   },
