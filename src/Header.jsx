@@ -1,26 +1,30 @@
 import { useRef, useEffect } from 'react';
+import { gsap, Power3 } from 'gsap';
 
-const Header = ({ timeline, ease }) => {
+const Header = () => {
+  let tl = new gsap.timeline();
+  let ease = Power3.easeOut();
   let logo = useRef(null);
   let menu_item1 = useRef(null);
   let menu_item2 = useRef(null);
   let menu_item3 = useRef(null);
 
   useEffect(() => {
-    timeline.from(logo, 1, {
+    tl.from(logo, 1, {
       opacity: 0,
       y: '50'
     });
 
-    timeline.from([menu_item1, menu_item2, menu_item3], 2, {
+    tl.from([menu_item1, menu_item2, menu_item3], 2, {
       opacity: 0,
       y: '-50',
       stagger: {
         amount: 0.4
       },
       ease: ease
-    })
-  }, [])
+    });
+
+  });
 
   return (
     <div className="absolute top-0 flex items-center justify-between px-4 h-[100px] w-full">
