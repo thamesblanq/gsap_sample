@@ -9,12 +9,12 @@ const Header = ({ timeline, ease }) => {
   useEffect(() => {
     timeline.from(logo, 1, {
       opacity: 0,
-      y: 100
+      y: '50'
     });
 
     timeline.from([menu_item1, menu_item2, menu_item3], 2, {
       opacity: 0,
-      y: -200,
+      y: '-50',
       stagger: {
         amount: 0.4
       },
